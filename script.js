@@ -210,18 +210,18 @@ function showResult() {
   textBox.textContent = 'Kamu akan..${topScore}';
 
   const IMAGE_DIR = "images/";
-  const catImages = {
-    Fire:  "fire-cat.png",
-    Plant: "plant-cat.png",
-    Seaside: "water-cat.png",
-    Moon:  "moon-cat.png",
+  const scoreImages = {
+    Dipenjara:  "Dipenjara.png.png",
+    Tersangka: "Tersangka.png.png",
+    Dituntut: "Dituntut.png.png",
+    Dipolisikan:  "Dipolisikan.png.png",
   };
 
   // Create image
   const img = document.createElement("img");
   img.classList.add("score-result"); // keeps styling like border-radius/margin
-  img.alt = `${topScore} Cat`;
-  img.src = IMAGE_DIR + catImages[topScore];
+  img.alt = `${topScore} Score`;
+  img.src = IMAGE_DIR + scoreImages[topScore];
 
 // inside showResult()
 if (window.innerWidth >= 1600) {
@@ -256,7 +256,7 @@ if (window.innerWidth >= 1600) {
 
   // Explore Other Kitties button
   const exploreBtn = document.createElement("button");
-  exploreBtn.textContent = "Explore Other Kitties";
+  exploreBtn.textContent = "Belum puas dengan tingkat keamananmuu?";
   exploreBtn.onclick = () => {
       window.location.href = "cats.html";
   };
