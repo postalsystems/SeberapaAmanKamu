@@ -17,109 +17,72 @@ let scenes = [
   },
 
   // Questions Set 1
-  { type: "question", text: "Saat pemerintah mengeluarkan kebijakan yang dinilai tidak populer dan berpotensi merugikan masyarakat, sikapmu adalah:
-", options: [
-    { text: "Saya akan melakukan riset mandiri, mengumpulkan data, dan menyusun kritik sistematis melalui platform media sosial dengan tagar yang strategis
-", scores: ["Dipenjara"] },
-    { text: "With a hearty and nutritious breakfast", scores: ["Plant"] },
-    { text: "Making a to-do list and setting intentions", scores: ["Fire"] },
-    { text: "Sleeping in after a late night, starting the day slowly", scores: ["Moon"] }
+  { type: "question", text: "Saat pemerintah mengeluarkan kebijakan yang dinilai tidak populer dan berpotensi merugikan masyarakat, sikapmu adalah:", options: [
+    { text: "Saya akan melakukan riset mandiri, mengumpulkan data, dan menyusun kritik sistematis melalui platform media sosial dengan tagar yang strategis", scores: ["Dipenjara"] },
+    { text: "Saya akan menyampaikan kritik melalui meme atau konten kreatif yang mudah dipahami, tanpa konfrontasi langsung", scores: ["Dipolisikan"] },
+    { text: "Saya memilih merepost konten di media sosial dan menyebarkannya ke khalayak luas", scores: ["Dituntut"] },
+    { text: "Saya akan turun ke jalan dan mendokumentasikan aksi protes, lalu membagikannya secara luas di media sosial", scores: ["Tersangka"] }
   ]},
-  { type: "question", text: "Which vibe calls to you most?", options: [
-    { text: "The sea", cats: ["Seaside"] },
-    { text: "Someplace with a lot of greenery", cats: ["Plant"] },
-    { text: "Someplace with a lot of energy and a lot going on", cats: ["Fire"] },
-    { text: "Somewhere private and quiet", cats: ["Moon"] }
+ { type: "question", text: "Ketika seorang teman membagikan kutipan dari buku pemikiran kiri di media sosial, reaksimu:", options: [
+    { text: "Suka banget dan langsung ikut menyebarkan kutipan tersebut di media sosialmu beserta rangkuman singkat tentang bukunya berdasarkan bacaanmu", scores: ["Dipenjara"] },
+    { text: "Ikut baca buku-buku itu", scores: ["Dipolisikan"] },
+    { text: "Ngobrol sama temen-temen atau dosen tentang buku kiri", scores: ["Dituntut"] },
+    { text: "Ikut ngajak temen-temen buat baca buku itu juga karena isinya Daging Banget", scores: ["Tersangka"] }
   ]},
-  { type: "question", text: "You have free time, what are you doing?", options: [
-    { text: "Practicing a craft you picked up", cats: ["Plant"] },
-    { text: "Exploring new towns and sights", cats: ["Seaside"] },
-    { text: "Reading a nonfiction book", cats: ["Moon"] },
-    { text: "Exercising or training", cats: ["Fire"] }
+ { type: "question", text: "Menghadapi unggahan viral yang mengungkapkan dugaan kecurangan sistemik dalam pemilu, kamu:", options: [
+    { text: "Membuat analisis data komprehensif dan membagikannya di semua platform dengan men-tag lembaga pengawas", scores: ["Dipenjara"] },
+    { text: "Retweet", scores: ["Dipolisikan"] },
+    { text: "Like aja..", scores: ["Dituntut"] },
+    { text: "Menyebarkan konten tersebut ke berbagai grup dengan caption yang menarik perhatian", scores: ["Tersangka"] }
   ]},
-  { type: "question", text: "What kind of friend are you in the friend group?", options: [
-    { text: "The observant friend who doesn’t quite belong to one group", cats: ["Seaside"] },
-    { text: "The friend who plans and organizes get-togethers", cats: ["Fire"] },
-    { text: "The friend in the background people sometimes forget", cats: ["Moon"] },
-    { text: "The parental figure who gives advice", cats: ["Plant"] }
+  { type: "question", text: "Menanggapi kenaikan harga sembako yang tidak terkendali, responsmu:", options: [
+    { text: "Membuat utas panjang menuntut akuntabilitas pejabat dengan bukti dan data lapangan", scores: ["Dipenjara"] },
+    { text: "Retweet, like, repost", scores: ["Dipolisikan"] },
+    { text: "Mengungkapkan kekhawatiran melalui curhat personal di media sosial tentang dampaknya", scores: ["Dituntut"] },
+    { text: "Mengajak boikot massal terhadap produk tertentu dan mendokumentasikan respons masyarakat", scores: ["Tersangka"] }
   ]},
-
+   { type: "question", text: "Ketika melihat kasus pelanggaran HAM yang melibatkan aparat negara, sikapmu:", options: [
+    { text: "Membuat dokumentasi lengkap dengan bukti dan menghubungkan dengan pelanggaran serupa sebelumnya", scores: ["Dipenjara"] },
+    { text: "Retweet!!!", scores: ["Dipolisikan"] },
+    { text: "Membagikan berita dari media independen dengan caption yang mendukung korban", scores: ["Dituntut"] },
+    { text: "Mengajak teman-temanmu untuk beraksi melalui sosial media, grupchat, dll.", scores: ["Tersangka"] }
+  ]},
+	
   // Dialogue before second set
   { type: "dialogue", 
-    text: "I’m curious on how you think and process! Let me ask you a few questions to get a better sense of that.", 
-    image: "images/Sprite.gif", 
-    maxWidth: "175px",
-    sound: "sounds/blip.mp3" },
+    text: "Pertanyaan setelah ini pertanyaan yang menentukan keselamatanmu lebih lanjut!.",
+ 	fadeIn: true, 
+	buttonText: "next"  },
 
   // Questions Set 2
-  { type: "question", text: "When learning a new skill, you prefer...", options: [
-    { text: "Hands-on trial and error with real ingredients", cats: ["Plant","Seaside"] },
-    { text: "Studying under a mentor’s guidance", cats: ["Fire"] },
-    { text: "Studying the theory and visualizing how it works", cats: ["Moon"] }
+  { type: "question", text: "Pernah gak kamu mengadvokasikan hak-hak orang lain yang diabaikan negara", options: [
+    { text: "Pernah!!!", score: ["Dipenjara","Tersangka"] },
+    { text: "Palingan pernah ikut ngeshare aja lewat sosmed", score: ["Dituntut"] },
+    { text: "Nggaksih", score: ["Dipolisikan"] }
   ]},
-  { type: "question", text: "Do you follow your gut, or weigh all your options logically?", options: [
-    { text: "I follow my gut and feeling", cats: ["Seaside"] },
-    { text: "I choose whatever makes the most logical sense", cats: ["Moon"] },
-    { text: "A balance of what makes sense and feels right", cats: ["Fire","Plant"] }
+  { type: "question", text: "Pernah gak kamu nyebarin atau ngelike atau repost meme tentang presiden kita", options: [
+    { text: "PERNAH LAH", score: ["Dituntut"] },
+    { text: "ya..ngelike aj sih....kocak min", score: ["Dipolisikan"] },
+    { text: "Iya terus gw tambahin teks SEBERAPA FRUSTRASINYA GUA",  score: ["Dipenjara","Tersangka"] },
   ]},
-  { type: "question", text: "You get a glimpse of where you want to be someday. What do you do next?", options: [
-    { text: "Create a plan and commit to making it happen", cats: ["Fire"] },
-    { text: "Wonder what it really means and watch for signs", cats: ["Moon"] },
-    { text: "Let go of the outcome. You’ll adapt when it comes", cats: ["Seaside"] },
-    { text: "Write it down and reflect on it over time", cats: ["Plant"] }
+  { type: "question", text: "kalo meme bahlil pernah gak", options: [
+    { text: "Pernah lah AWOKAOKOWKOK", score: ["Dipenjara","Tersangka"] },
+    { text: "pernah..", score: ["Dipolisikan"] },
+    { text: "Nggak (nggak salah lagi!)", score: ["Dipolisikan"] },
+    { text: "hehe",score: ["Dituntut"] },
   ]},
-  { type: "question", text: "What’s your approach to learning a new skill?", options: [
-    { text: "Practice until it’s perfect", cats: ["Fire"] },
-    { text: "Observe others and copy what works", cats: ["Moon"] },
-    { text: "Follow your intuition and let that guide you", cats: ["Seaside"] },
-    { text: "Experiment and reflect on what works", cats: ["Plant"] }
-  ]},
-
+ 
   // Dialogue before third set
   { type: "dialogue", 
-    text: "Ok, these questions are going to be a little more personal, no pressure! Answer to the best of your ability 😊", 
-    image: "images/Sprite.gif", 
-    maxWidth: "175px",
-    sound: "sounds/blip.mp3" },
+    text: "Udah ah, udh penasaran blm sama hasilnya??", 
+    fadeIn: true, 
+	buttonText: "iyaaaaaa cpetan!!!",
+    },
+	
 
-  // Questions Set 3
-  { type: "question", text: "When you feel overwhelmed, what do you usually do?", options: [
-    { text: "Power through — obstacles are meant to be overcome", cats: ["Fire"] },
-    { text: "Retreat somewhere peaceful and quiet", cats: ["Plant"] },
-    { text: "Journal, light a candle, and let thoughts unfold", cats: ["Moon"] },
-    { text: "Go for a walk or take a long bath", cats: ["Seaside"] }
-  ]},
-  { type: "question", text: "What motivates you most?", options: [
-    { text: "A deep desire to understand and reflect the world", cats: ["Seaside","Moon"] },
-    { text: "A need to grow, improve, and create lasting change", cats: ["Fire","Plant"] }
-  ]},
-  { type: "question", text: "Do you tend to keep your emotions private or share them easily?", options: [
-    { text: "You only share when you feel like it", cats: ["Seaside"] },
-    { text: "You’re not afraid to share what you feel and think", cats: ["Fire"] },
-    { text: "You only share with people you feel safe with", cats: ["Plant"] },
-    { text: "You prefer to keep your emotions private", cats: ["Moon"] }
-  ]},
-  { type: "question", text: "When someone hurts you, are you more likely to withdraw or confront them?", options: [
-    { text: "Confront", cats: ["Fire","Plant"] },
-    { text: "Withdraw", cats: ["Seaside","Moon"] }
-  ]},
-  { type: "question", text: "Do you feel like people know the real you, or do you keep parts hidden?", options: [
-    { text: "Real you", cats: ["Fire"] },
-    { text: "Hidden", cats: ["Moon"] },
-    { text: "Only share when prompted", cats: ["Plant","Seaside"] }
-  ]}
-];
 
 // Track current scene
 let currentScene = 0;
-
-// Preload the first few images to prevent blinking
-const preloadImages = [
-  "images/house.gif",
-  "images/lynn.png",
-  "images/Sprite.gif",
-  "images/Sprite-2.gif"
-];
 
 preloadImages.forEach(src => {
   const img = new Image();
@@ -214,7 +177,7 @@ function showScene() {
           btn.textContent = option.text;
           btn.classList.add("question-btn"); // style for questions
           btn.onclick = () => {
-              option.cats.forEach(cat => scores[cat] += 1);
+              option.score.forEach(score => scores[score] += 1);
               currentScene++;
               if (currentScene >= scenes.length) {
                   showResult();
@@ -242,9 +205,9 @@ function showResult() {
   const overlay = document.getElementById("overlay");
   overlay.style.opacity = 1;
 
-  // Determine top cat
-  const topCat = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
-  textBox.textContent = `Your kitty is the ... ${topCat} Kitty!`;
+  // Determine top score
+  const topScore = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+  textBox.textContent = 'Kamu akan..${topScore}';
 
   const IMAGE_DIR = "images/";
   const catImages = {
@@ -256,9 +219,9 @@ function showResult() {
 
   // Create image
   const img = document.createElement("img");
-  img.classList.add("cat-result"); // keeps styling like border-radius/margin
-  img.alt = `${topCat} Cat`;
-  img.src = IMAGE_DIR + catImages[topCat];
+  img.classList.add("score-result"); // keeps styling like border-radius/margin
+  img.alt = `${topScore} Cat`;
+  img.src = IMAGE_DIR + catImages[topScore];
 
 // inside showResult()
 if (window.innerWidth >= 1600) {
@@ -285,7 +248,7 @@ if (window.innerWidth >= 1600) {
   homeBtn.onclick = () => {
       overlay.style.opacity = 0;
       textBox.classList.remove("results-active");
-      scores = { Fire: 0, Plant: 0, Seaside: 0, Moon: 0 };
+      scores = { Dipenjara: 0, Tersangka: 0, Dituntut: 0, Dipolisikan: 0 };
       currentScene = 0;
       showScene();
   };
