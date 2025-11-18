@@ -1,22 +1,29 @@
 // Scores
-let scores = { Fire: 0, Plant: 0, Seaside: 0, Moon: 0 };
- 
+let scores = { Dipenjara: 0, Tersangka : 0, Dituntut: 0, Dipolisikan: 0 };
+
+// Scenes (dialogue + questions)
+let scenes = [ 
+   // Opening Dialogue
   { type: "dialogue", 
     text: "Halo! selamat datang. Melalui tes ini kamu akan mengetahui seberapa aman kamu selama berkespresi di media sosial.", 
     fadeIn: true, 
-		buttonText: next,
+	buttonText: "next",
     },
 
   { type: "dialogue", 
     text: "PERHATIAN: JIKA KAMU MAHASISWA FISIPOL KAMU TIDAK AKAN SELAMAT.", 
+    fadeIn: true, 
+   	buttonText: "next",
   },
 
   // Questions Set 1
-  { type: "question", text: "What’s your ideal way to start the morning?", options: [
-    { text: "With a warm drink, watching the sunrise scenery", cats: ["Seaside"] },
-    { text: "With a hearty and nutritious breakfast", cats: ["Plant"] },
-    { text: "Making a to-do list and setting intentions", cats: ["Fire"] },
-    { text: "Sleeping in after a late night, starting the day slowly", cats: ["Moon"] }
+  { type: "question", text: "Saat pemerintah mengeluarkan kebijakan yang dinilai tidak populer dan berpotensi merugikan masyarakat, sikapmu adalah:
+", options: [
+    { text: "Saya akan melakukan riset mandiri, mengumpulkan data, dan menyusun kritik sistematis melalui platform media sosial dengan tagar yang strategis
+", scores: ["Dipenjara"] },
+    { text: "With a hearty and nutritious breakfast", scores: ["Plant"] },
+    { text: "Making a to-do list and setting intentions", scores: ["Fire"] },
+    { text: "Sleeping in after a late night, starting the day slowly", scores: ["Moon"] }
   ]},
   { type: "question", text: "Which vibe calls to you most?", options: [
     { text: "The sea", cats: ["Seaside"] },
